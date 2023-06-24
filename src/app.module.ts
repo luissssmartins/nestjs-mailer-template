@@ -5,7 +5,7 @@ import { ConfigModule } from '@nestjs/config';
 import { MailModule } from './modules/mail.module';
 
 @Module({
-  
+
   imports: [
     ConfigModule.forRoot(),
     MailModule
@@ -14,4 +14,5 @@ import { MailModule } from './modules/mail.module';
   controllers: [AppController],
   providers: [AppService],
 })
+
 export class AppModule {}
