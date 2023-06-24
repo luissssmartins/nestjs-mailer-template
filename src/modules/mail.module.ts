@@ -1,4 +1,3 @@
-import { MailerService } from "@nest-modules/mailer";
 import { MailerModule } from "@nest-modules/mailer";
 import { Module } from "@nestjs/common";
 
@@ -9,16 +8,17 @@ import { Module } from "@nestjs/common";
 
         transport: {
 
-          service: 'gmail',
-          host: 'smtp.gmail.com',
-          port: 465,
-          secure: true,
+          host: 'smtp.mailgun.org',
+          port: 587,
+          secure: false,
+
           auth: {
-            user: process.env.MAILER_USER,
+            user: process.env.MAILER_USERNAME,
             pass: process.env.MAILER_PASSWORD
           },
 
-          ignoreTLS: false,
+          ignoreTLS: true,
+
         },
 
         defaults: {
