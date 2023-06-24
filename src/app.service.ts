@@ -1,6 +1,5 @@
 import { Injectable } from '@nestjs/common';
 import { MailerService } from '@nest-modules/mailer';
-import { Subject } from 'rxjs';
 
 @Injectable()
 export class AppService {
